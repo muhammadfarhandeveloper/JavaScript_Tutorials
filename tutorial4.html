@@ -93,12 +93,40 @@
 
 
 
-     var a = "muhammad";
-     var b = "farhan";
+    // Contatenation with plus
+    //  var a = "muhammad";
+    //  var b = "farhan";
      
 
-     document.write(a + " " + b + " " + "ALi");
+    //  document.write(a + " " + b + " " + "ALi");
 
+    // contaneation with template string
+
+    var array = [
+        {
+            id : 1,
+            src : "halcyon-splash.jpg",
+            title : "Title 1",
+            desc : "lorem asfj the project the projects"
+        },
+        {
+            id : 2,
+            src : "halcyon-splash.jpg",
+            title : "Title 2",
+            desc : "lorem asfj the project the projects"
+        },
+    ]
+
+    document.write(`
+        <img src="${array[1].src}" width="200" height="200px"/>
+        <h3>${array[1].title}</h3>
+        <p> ${array[1].desc}</p>
+        
+    `)
+
+    // document.write("skdf asldjfkl
+    // ")
+  
 
 
 
