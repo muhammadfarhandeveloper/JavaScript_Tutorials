@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial 9</title>
+</head>
+<body >
+
+
+      <!-- <h1 id="myhead" title="myheading" align="center">usama <i> naeem 1 </i> </h1>
+
+      <button onclick="myfun()">Click Me </button> -->
+
+        <input type="text" required placeholder="enter name " id="myinput1" />
+        <input type="text" required placeholder="enter name " id="myinput2" />
+        <button onclick="myfun()">Submit</button>
+        
+      <p id="para1"></p>
+
+
+      <script>
+
+ 
+
+        function myfun() { 
+
+
+          var val1 = document.getElementById('myinput1').value;
+          var val2 = document.getElementById('myinput2').value;
+          var add = parseInt(val1) + parseInt(val2);
+          var sub = parseInt(val1) - parseInt(val2);
+          var mul = parseInt(val1) * parseInt(val2);
+          var div = parseInt(val1) / parseInt(val2);
+          document.getElementById('para1').innerHTML = `<p>Your Addition is ${add}</p>
+          <p>Your subtraction is ${sub}</p>
+          <p>Your multiplication is ${mul}</p>
+          <p>Your divsion is ${div}</p>
+          `;
+          document.getElementById('para1').style.color = 'red';
+          document.getElementById('para1').style.backgroundColor = 'green';
+          
+          // console.log(val);
+         }
+
+
+        //  var var1 =  document.getElementsByClassName('heading');
+        //  var var1 =  document.getElementById('myhead').getAttribute('align');
+        // function myfun(){
+        //   document.getElementById('myhead').innerHTML = '<i> Muhammad </i> Farhan';
+        //   document.getElementById('myhead').removeAttribute('align')
+
+        // } 
+        
+
+
+
+      </script>
+
+
+</body>
+</html>
