@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Tutorial 11</title>
+</head>
+<body >
+
+  
+  <!-- <input type="text"  id="myname">
+  <button onclick="myfun()">CLick Me</button>
+  
+      <ul id="list">
+  
+      </ul> -->
+
+
+      <input type="text" id="myname">
+      <button onclick="addelement()">Add</button>
+      <button onclick="deleteelement()">Delete</button>
+
+      <ul id="list">
+
+      </ul>
+
+
+<script>
+
+
+    // var array = ["farhan" , "ali" , "rehman", "afaq","imran","salman"];
+
+
+    // array.push("naveed")
+
+    // array.pop();
+
+    // delete array[4]
+
+    // array[1] = "muhammad ali";
+
+    // array.unshift("muneeb")
+
+    // sort()  arragne the Element into A-z
+    // reverse()  arragne the element into z-a
+    // push end me ek element ko add 
+    // pop end me ek element ko delete
+    // shift start element delete 
+    // unshif start element me add kar dy ga 
+    //  indexOf element ko search kary ga in array and return index number
+    // included elemetn ko search kar ga in array and reutrn in boolean
+
+
+    // console.log(array.indexOf("naveed"));
+    // console.log(array.includes("farhan"));
+
+
+    var array = ["farhan","ali","rehman","arham"];
+
+    function showlelements() { 
+      document.getElementById("list").innerHTML = "";
+      for(var i =0;i<array.length;i++){
+        if(array[i] == undefined){}
+        else{
+
+          document.getElementById("list").innerHTML += `<li> ${array[i]} </li>`;
+        }
+      }
+     }
+
+     showlelements();
+
+     function deleteelement() { 
+
+        var name = document.getElementById("myname").value;
+        var indexnum = array.indexOf(name);
+        console.log(indexnum)
+        delete array[indexnum];
+        showlelements();
+
+      }
+    console.log(array);
+
+    function addelement() { 
+
+      var name = document.getElementById("myname").value;
+      array.push(name);
+      showlelements();
+      console.log(array);
+
+     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+      // function myfun() { 
+
+      //   var name = document.getElementById("myname").value;
+      //     console.log(name);
+      //   if(name == ""){
+      //     alert("please enter name : ")
+      //   }
+      //   else{
+
+      //     document.getElementById("list").innerHTML += `<li>${name} </li>`
+      //   }
+        
+      // }
+
+    </script>
+
+  
+
+
+  
+</body>
+</html>
