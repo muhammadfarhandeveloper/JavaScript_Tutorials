@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Tutorial 11</title>
+</head>
+<body >
+
+
+      <input type="text" id="myname" onkeyup="myfunfilter()">
+      <button onclick="addelement()">Add</button>
+      <button onclick="deleteelement()">Delete</button>
+
+      <ul id="list">
+
+      </ul>
+
+
+      <!-- <input type="text" id="newname" onkeyup="myfilterfun()"> -->
+
+<script>
+
+
+    var array = ["farhan","ali","rehman","arham"];
+
+var newnames = []
+    function myfunfilter() { 
+        
+      var alifname = document.getElementById("myname").value;
+
+     newnames=   array.filter(function(a) {
+      
+      if(a.includes(alifname) == true){
+        return a;
+      }
+      
+    })
+    showlelements();
+
+     }
+
+    function showlelements() { 
+      document.getElementById("list").innerHTML = "";
+      for(var i =0;i<newnames.length;i++){
+        if(newnames[i] == undefined){}
+        else{
+
+          document.getElementById("list").innerHTML += `<li> ${newnames[i]} </li>`;
+        }
+      }
+     }
+
+     showlelements();
+
+     function deleteelement() { 
+
+        var name = document.getElementById("myname").value;
+        var indexnum = array.indexOf(name);
+        if(indexnum < 0){
+          alert("don't have element!")
+        }
+        else{
+
+          delete array[indexnum];
+          showlelements();
+        }
+
+      }
+
+
+    function addelement() { 
+
+      var name = document.getElementById("myname").value;
+      if(name == ""){
+        alert("Please Enter name")
+      }
+      else{
+
+        if(array.includes(name) == true){
+          alert("Please Enter Unique Name!")
+        }
+        else{
+
+          
+          array.push(name);
+          showlelements();
+
+        }
+      }
+
+     }
+
+
+
+  //    var age = [30,12,10,23,45,90];
+
+  //    console.log(age);
+
+  // var newarr =  age.filter(function(a){
+
+  //     return a>18;
+  //   })
+
+
+  //   console.log(newarr);
+
+
+  // function myfilterfun() { 
+    
+  //   var alifname = document.getElementById("newname").value; 
+  //   var names  = ["farhan","ali","farah","ali","aashique","bilal"];
+    
+  //   var newnames=   names.filter(function(a) {
+      
+  //     if(a.includes(alifname) == true){
+  //       return a;
+  //     }
+      
+  //   })
+  //   console.log(newnames);
+  // }
+
+
+
+
+
+
+
+      // function myfun() { 
+
+      //   var name = document.getElementById("myname").value;
+      //     console.log(name);
+      //   if(name == ""){
+      //     alert("please enter name : ")
+      //   }
+      //   else{
+
+      //     document.getElementById("list").innerHTML += `<li>${name} </li>`
+      //   }
+        
+      // }
+
+    </script>
+
+  
+
+
+  
+</body>
+</html>
