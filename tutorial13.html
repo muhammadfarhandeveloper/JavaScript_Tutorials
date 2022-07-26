@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Tutorial 13</title>
+</head>
+<style>
+  body{
+    margin: 20px;
+  }
+</style>
+<body>
+
+   <!-- <input type="text" placeholder="Enter Foot" id="foot">
+   <button onclick="myfun()">Calculate</button>
+
+   <p id="inch"></p> -->
+
+   <!-- <p id="date"></p>
+
+   <button onclick="clearInterval(myinterval)">click me</button> -->
+  
+
+
+
+<!-- gallery work -->
+
+
+  <div class="container">
+
+    <div class="row" id="mycard">
+
+    </div>
+  </div>
+
+
+
+
+  
+  <script>
+
+    var array = [
+      {
+        id : 1,
+        src : "./images/sofa1.png",
+        title : "Title 1 ",
+        price : 200
+      },
+      {
+        id : 2,
+        src : "./images/sofa2.png",
+        title : "Title 2 ",
+        price : 300
+      },
+      {
+        id : 3,
+        src : "./images/sofa3.png",
+        title : "Title 3 ",
+        price : 250
+      }
+    ]
+
+    var newarray =[]; 
+
+     for(var i =0;i<array.length;i++){
+
+      document.getElementById("mycard").innerHTML += `
+
+      <div class="col-md-4">
+          <div class="card p-2">
+            <img src="${array[i].src}" width="100%" height="200px"/>
+            <h3>${array[i].title}</h3>
+            <p> Price : ${array[i].price}</p>
+            <button class="btn btn-primary" onclick="addcart(${array[i].id})">Add Cart</button>
+            </div>
+        </div>
+
+      `
+
+     }
+
+     function addcart(myid) { 
+    var obj;
+      for(var i=0;i<array.length;i++){
+        if(array[i].id == myid){
+          obj = {src : array[i].src , title : array[i].title , price : array[i].price};
+
+        }
+      }
+      newarray.push(obj);
+      
+
+ console.log(newarray);
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // var myinterval = setInterval(function(){
+      
+    //   var mydate = new Date();
+
+    //   document.getElementById("date").innerText = mydate.toTimeString();
+
+    // }, 3000);
+
+
+ 
+     
+
+
+
+// var obj = {id : 1,name: "farhan",lname : "ali",age:1}
+
+//     for (const key in obj) {
+//       document.write("  " + obj[key]);
+//     }
+
+//     const ar = ['farhan','ali'];
+//     console.log(ar);
+    
+    
+//     ar[0] = 'M farhan';
+//       ar = ['nehal','afan','afaq'];
+//       console.log(ar);
+
+
+    // there are five types of loop
+    // for 
+    // while
+    // do while
+    // foreach
+    // forin loop
+
+  //   var age = ["ali","nehal","arif","afan","hassan","hussain","Ali"];
+
+  // var array1  =  age.map(function(val) {
+
+  //     document.write(val + "<br>" )
+
+  //     })
+
+  //     var array2  =  age.forEach(function(val){
+  //       document.write( val + "<br>")
+  //   })
+
+  //   console.log(array1);
+  //   console.log(array2);
+
+    // for(var i =0;i<age.length;i++){
+    //   document.write(age[i] + "<br>")
+    // }
+
+
+
+
+
+
+    // function myfun() {
+
+    //     var myfoot = document.getElementById("foot").value;
+         
+    //     var answer = parseFloat(myfoot)*12;
+    //     document.getElementById("inch").innerText = answer;
+
+
+
+    //   }
+
+
+
+  </script>
+  
+</body>
+</html>
